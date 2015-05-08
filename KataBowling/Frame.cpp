@@ -1,16 +1,26 @@
 ﻿#include "Frame.h"
 
-
 Frame::Frame(int FirstRoll, int SecondRoll)
 {
-	rolls[0] = FirstRoll;
-	rolls[1] = SecondRoll;
+	rolls.push_back(FirstRoll);
+	rolls.push_back(SecondRoll);
+}
+
+
+Frame::Frame(int FirstRoll, int SecondRoll, int LastFrameExtraRoll)
+{
+	rolls.push_back(FirstRoll);
+	rolls.push_back(SecondRoll);
+	rolls.push_back(LastFrameExtraRoll);
 }
 
 
 int Frame::GetScore()
 {
-	return rolls[0] + rolls[1];
+	int score = 0;
+	for (int rollScore : rolls)
+		score += rollScore;
+	return score;
 }
 
 
@@ -24,4 +34,10 @@ bool Frame::IsSpare()
 bool Frame::IsStrike()
 {
 	return rolls[0] == 10;
+}
+
+
+bool Frame::IsLastFrame()
+{
+	return rolls.size() == 3;
 }
