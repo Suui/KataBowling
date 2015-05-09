@@ -26,8 +26,7 @@ int Frame::GetScore()
 
 bool Frame::IsSpare()
 {
-	if (rolls[0] == 10) return false;
-	return rolls[0] + rolls[1] == 10;
+	return rolls[0] < 10 && rolls[0] + rolls[1] == 10;
 }
 
 
