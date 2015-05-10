@@ -4,5 +4,8 @@
 
 class ScoreCalculator
 {
-	int GetScore(Frame frames[]);
+
+public:
+
+	static int GetScore(Frame frames[]);
 };

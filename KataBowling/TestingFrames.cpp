@@ -90,7 +90,7 @@ TEST_CASE("Line score tests", "[score][line]")
 
 	SECTION("A Spare")
 	{
-
+		
 	}
 
 	SECTION("A Strike")
