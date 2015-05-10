@@ -90,7 +90,7 @@ TEST_CASE("Line score tests", "[score][line]")
 
 	SECTION("A Spare")
 	{
-		
+		REQUIRE(Line("G-36G4G/3-G-18G-9-9-").GetScore() == 56);
 	}
 
 	SECTION("A Strike")
