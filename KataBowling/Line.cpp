@@ -32,10 +32,10 @@ void Line::SetFrames(const std::string Input)
 
 void Line::SetLastFrame(const std::string Input, int j)
 {
-	if (j - Input.length() == 3) 
+	if (Input.length() - j == 3)
 		Frames[9] = FrameInterpreter::interpret(Input.at(j), Input.at(j + 1), Input.at(j + 2));
-	
-	Frames[9] = FrameInterpreter::interpret(Input.at(j), Input.at(j + 1));
+	else
+		Frames[9] = FrameInterpreter::interpret(Input.at(j), Input.at(j + 1));
 }
 
 

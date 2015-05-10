@@ -95,12 +95,22 @@ TEST_CASE("Line score tests", "[score][line]")
 
 	SECTION("A Strike")
 	{
-
+		REQUIRE(Line("G-36G4G-X3-18G-9-9-").GetScore() == 66);
 	}
 
 	SECTION("A Spare and a Strike")
 	{
+		REQUIRE(Line("5/5-G-G/X5/3-G-G-3-").GetScore() == 89); // 10+5=15 +5=20 +10+10=40  +20+10=70 +10+3=83 +3=86 +3=89  [89]
+	}
 
+	SECTION("Spare or Strike in the Last Frame")
+	{
+		REQUIRE(Line("G-G-G-G-G-G-G-G-G-G/G").GetScore() == 10);
+		REQUIRE(Line("G-G-G-G-G-G-G-G-G-G/X").GetScore() == 20);
+		REQUIRE(Line("G-G-G-G-G-G-G-G-G-XXX").GetScore() == 30);
+
+		REQUIRE(Line("G-G-G-G-G-G-G-G-G/XXX").GetScore() == 50);
+		REQUIRE(Line("G-G-G-G-G-G-G-G-XXXX").GetScore() == 60);
 	}
 
 	SECTION("All Spares")

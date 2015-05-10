@@ -35,7 +35,25 @@ Frame FrameInterpreter::GetFirstRollIsZeroInterpretation(char SecondRoll)
 
 Frame FrameInterpreter::interpret(char FirstRoll, char SecondRoll, char LastRoll)
 {
-	Frame frame = interpret(FirstRoll, SecondRoll);
-	if (LastRoll == 'X') return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), 10);
-	return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), LastRoll - '0');
+	if (FirstRoll != 'X')
+	{
+		Frame frame = interpret(FirstRoll, SecondRoll);
+		if (LastRoll == 'X') return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), 10);
+		if (LastRoll == 'G') return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), 0);
+		return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), LastRoll - '0');
+	}
+
+	if (SecondRoll != 'X')
+	{
+		Frame frame = interpret(SecondRoll, LastRoll);
+		return Frame(10, frame.GetFirstRoll(), frame.GetSecondRoll());
+	}
+
+	if (LastRoll != 'X')
+	{
+		if (LastRoll == 'G') return Frame(10, 10, 0);
+		return Frame(10, 10, LastRoll - '0');
+	}
+
+	return Frame(10, 10, 10);
 }
