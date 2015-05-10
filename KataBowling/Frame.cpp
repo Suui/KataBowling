@@ -1,5 +1,11 @@
 ﻿#include "Frame.h"
 
+
+Frame::Frame()
+{
+}
+
+
 Frame::Frame(int FirstRoll, int SecondRoll)
 {
 	rolls.push_back(FirstRoll);

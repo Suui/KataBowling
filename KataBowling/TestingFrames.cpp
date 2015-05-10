@@ -2,6 +2,8 @@
 
 #include "catch.hpp"
 #include "Frame.h"
+#include "FrameInterpreter.h"
+#include "Line.h"
 
 
 TEST_CASE("Testing Frame Scores", "[score][frame]")
@@ -32,7 +34,7 @@ TEST_CASE("Testing Strike, Spare and Last Frame", "[score][frame]")
 }
 
 
-SCENARIO("Testing score values for the Last Frame (plain sum)", "[score]")
+SCENARIO("Testing score values for the Last Frame (plain sum)", "[score][frame]")
 {
 	GIVEN("A last frame score of 0, 0, 0")
 	{
@@ -56,5 +58,58 @@ SCENARIO("Testing score values for the Last Frame (plain sum)", "[score]")
 		
 		REQUIRE(LastFrame->IsLastFrame());
 		CHECK(LastFrame->GetScore() == 30);
+	}
+}
+
+
+TEST_CASE("Score Interpreter interpretations", "[score][interpreter]")
+{
+	REQUIRE(FrameInterpreter::interpret('G', '-').GetScore() == 0);
+	REQUIRE(FrameInterpreter::interpret('G', '3').GetScore() == 3);
+	REQUIRE(FrameInterpreter::interpret('G', '/').GetScore() == 10);
+	
+	REQUIRE(FrameInterpreter::interpret('3', '-').GetScore() == 3);
+	REQUIRE(FrameInterpreter::interpret('3', '5').GetScore() == 8);
+	REQUIRE(FrameInterpreter::interpret('3', '/').GetScore() == 10);
+
+	REQUIRE(FrameInterpreter::interpret('X').GetScore() == 10);
+}
+
+
+TEST_CASE("Line score tests", "[score][line]")
+{
+	SECTION("All zeroes")
+	{
+		REQUIRE(Line("G-G-G-G-G-G-G-G-G-G-").GetScore() == 0);
+	}
+
+	SECTION("No Spares or Strikes")
+	{
+		REQUIRE(Line("G-36G4G-G-G-18G-9-9-").GetScore() == 40);
+	}
+
+	SECTION("A Spare")
+	{
+
+	}
+
+	SECTION("A Strike")
+	{
+
+	}
+
+	SECTION("A Spare and a Strike")
+	{
+
+	}
+
+	SECTION("All Spares")
+	{
+
+	}
+
+	SECTION("All Strikes")
+	{
+
 	}
 }
