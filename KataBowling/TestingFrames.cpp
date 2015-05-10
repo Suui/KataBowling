@@ -115,11 +115,13 @@ TEST_CASE("Line score tests", "[score][line]")
 
 	SECTION("All Spares")
 	{
-
+		REQUIRE(Line("G/G/G/G/G/G/G/G/G/G/G").GetScore() == 100);
+		REQUIRE(Line("3/3/3/3/3/3/3/3/3/3/3").GetScore() == 130);
+		REQUIRE(Line("5/5/5/5/5/5/5/5/5/5/5").GetScore() == 150);
 	}
 
 	SECTION("All Strikes")
 	{
-
+		REQUIRE(Line("XXXXXXXXXXXX").GetScore() == 300);
 	}
 }
