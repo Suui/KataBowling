@@ -90,6 +90,8 @@
     <ClCompile Include="FrameInterpreter.cpp" />
     <ClCompile Include="ScoreCalculator.cpp" />
     <ClCompile Include="TestingFrames.cpp" />
+    <ClCompile Include="TestingLineScores.cpp" />
+    <ClCompile Include="TestingScoreInterpreter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

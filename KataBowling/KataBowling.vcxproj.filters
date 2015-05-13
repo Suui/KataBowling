@@ -50,5 +50,11 @@
     <ClCompile Include="ScoreCalculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestingScoreInterpreter.cpp">
+      <Filter>Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="TestingLineScores.cpp">
+      <Filter>Testing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
