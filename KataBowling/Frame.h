@@ -28,4 +28,6 @@ public:
 	int GetSecondRoll() const { return rolls[1]; }
 
 	int GetThirdRoll() { if (IsLastFrame()) return rolls[3]; }
+
+	std::vector<int> GetRolls() const { return rolls; }
 };

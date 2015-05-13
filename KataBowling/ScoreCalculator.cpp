@@ -22,3 +22,12 @@ int ScoreCalculator::GetScore(Frame frames[])
 	
 	return score;
 }
+
+
+int ScoreCalculator::GetScore(Frame frame)
+{
+	int score = 0;
+	for (int rollScore : frame.GetRolls())
+		score += rollScore;
+	return score;
+}

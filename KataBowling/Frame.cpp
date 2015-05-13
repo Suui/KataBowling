@@ -1,4 +1,5 @@
 ﻿#include "Frame.h"
+#include "ScoreCalculator.h"
 
 
 Frame::Frame()
@@ -23,10 +24,7 @@ Frame::Frame(int FirstRoll, int SecondRoll, int LastFrameExtraRoll)
 
 int Frame::GetScore()
 {
-	int score = 0;
-	for (int rollScore : rolls)
-		score += rollScore;
-	return score;
+	return ScoreCalculator::GetScore(*this);
 }
 
 
