@@ -38,15 +38,15 @@ Frame FrameInterpreter::interpret(char FirstRoll, char SecondRoll, char LastRoll
 	if (FirstRoll != 'X')
 	{
 		Frame frame = interpret(FirstRoll, SecondRoll);
-		if (LastRoll == 'X') return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), 10);
-		if (LastRoll == 'G') return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), 0);
-		return Frame(frame.GetFirstRoll(), frame.GetSecondRoll(), LastRoll - '0');
+		if (LastRoll == 'X') return Frame(frame.GetFirstRollScore(), frame.GetSecondRollScore(), 10);
+		if (LastRoll == 'G') return Frame(frame.GetFirstRollScore(), frame.GetSecondRollScore(), 0);
+		return Frame(frame.GetFirstRollScore(), frame.GetSecondRollScore(), LastRoll - '0');
 	}
 
 	if (SecondRoll != 'X')
 	{
 		Frame frame = interpret(SecondRoll, LastRoll);
-		return Frame(10, frame.GetFirstRoll(), frame.GetSecondRoll());
+		return Frame(10, frame.GetFirstRollScore(), frame.GetSecondRollScore());
 	}
 
 	if (LastRoll != 'X')

@@ -23,11 +23,11 @@ public:
 
 	bool IsLastFrame();
 
-	int GetFirstRoll() const { return rolls[0]; }
+	int GetFirstRollScore() const { return rolls[0]; }
 
-	int GetSecondRoll() const { return rolls[1]; }
+	int GetSecondRollScore() const { return rolls[1]; }
 
-	int GetThirdRoll() { if (IsLastFrame()) return rolls[3]; }
+	int GetThirdRollScore() { if (IsLastFrame()) return rolls[3]; }
 
 	std::vector<int> GetRolls() const { return rolls; }
 };
