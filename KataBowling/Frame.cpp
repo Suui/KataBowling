@@ -19,6 +19,7 @@ int Frame::knocks()
 
 int Frame::parseToInt(char roll)
 {
+	if (roll == 'X') return 10;
 	if (roll == '/') return 10 - rolls[0];
 	if (roll == '-') return 0;
 	return roll - '0';
