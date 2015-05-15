@@ -18,19 +18,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="catch.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FrameInterpreter.h">
+    <ClInclude Include="ScoreCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ScoreCalculator.h">
+    <ClInclude Include="catch.hpp">
+      <Filter>Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,9 +44,6 @@
     <ClCompile Include="Line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FrameInterpreter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ScoreCalculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="TestingLineScores.cpp">
       <Filter>Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameBuilder.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
