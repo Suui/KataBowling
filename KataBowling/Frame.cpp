@@ -1,6 +1,9 @@
 ﻿#include "Frame.h"
 
 
+Frame::Frame() {}
+
+
 Frame::Frame(const std::vector<char>& input)
 {
 	for (char c : input)

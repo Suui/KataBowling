@@ -7,6 +7,8 @@ class Frame
 
 public:
 
+	Frame();
+
 	explicit Frame(const std::vector<char>& rolls);
 
 	int knocks();

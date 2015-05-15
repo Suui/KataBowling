@@ -80,10 +80,13 @@
   <ItemGroup>
     <ClInclude Include="catch.hpp" />
     <ClInclude Include="Frame.h" />
+    <ClInclude Include="Line.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="Line.cpp" />
     <ClCompile Include="TestingFrames.cpp" />
+    <ClCompile Include="TestingLines.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
