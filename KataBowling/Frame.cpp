@@ -16,4 +16,5 @@ int Frame::knocks()
 int Frame::parseToInt(char roll)
 {
 	if (roll == '-') return 0;
+	return roll - '0';
 }
