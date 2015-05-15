@@ -24,3 +24,9 @@ int Frame::parseToInt(char roll)
 	if (roll == '-') return 0;
 	return roll - '0';
 }
+
+
+bool Frame::isStrike()
+{
+	return rolls[0] < 10 && knocks() == 10;
+}

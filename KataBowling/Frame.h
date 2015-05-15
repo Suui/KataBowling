@@ -12,4 +12,6 @@ public:
 	int knocks();
 
 	int parseToInt(char roll);
+	
+	bool isStrike();
 };
