@@ -14,4 +14,6 @@ public:
 	int parseToInt(char roll);
 	
 	bool isSpare();
+
+	bool isStrike();
 };

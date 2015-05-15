@@ -30,4 +30,6 @@ TEST_CASE("Checking what a Frame is", "[frame]")
 	SECTION("Frame knows it is a Spare")
 		REQUIRE(Frame({ '-', '/' }).isSpare());
 
+	SECTION("Frame knows it is a Strike")
+		REQUIRE(Frame({ 'X' }).isStrike());
 }

@@ -30,3 +30,9 @@ bool Frame::isSpare()
 {
 	return rolls[0] < 10 && knocks() == 10;
 }
+
+
+bool Frame::isStrike()
+{
+	return rolls[0] == 10;
+}
