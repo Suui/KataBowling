@@ -17,7 +17,10 @@ int Line::score()
 {
 	int sum = 0;
 	for (int i = 0; i < FRAMES_IN_LINE; ++i)
+	{
 		sum += frames[i].knocks();
+		if (frames[i].isSpare()) sum += frames[i + 1].knocks();
+	}
 
 	return sum;
 }
