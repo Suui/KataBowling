@@ -15,4 +15,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 
 	SECTION("Calculates score for a line with a spare and a strike")
 		REQUIRE(Line("-3--23--3/4-X35----").score() == 52);
+
+	SECTION("Calculates score for a line with two consecutive strikes")
+		REQUIRE(Line("--XX--------------").score() == 30);
 }

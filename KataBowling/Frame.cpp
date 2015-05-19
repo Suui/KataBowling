@@ -29,6 +29,7 @@ int Frame::firstRoll()
 int Frame::secondRoll()
 {
 	if (rolls.size() > 1) return rolls[1];
+	return 0;
 }
 
 
