@@ -12,4 +12,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 
 	SECTION("Calculates score for a line with a spare")
 		REQUIRE(Line("-3--23--3/4---------").score() == 26);
+
+	SECTION("Calculates score for a line with a spare and a strike")
+		REQUIRE(Line("-3--23--3/4-X35----").score() == 52);
 }

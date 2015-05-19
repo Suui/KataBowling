@@ -20,6 +20,18 @@ int Frame::knocks()
 }
 
 
+int Frame::firstRoll()
+{
+	return rolls[0];
+}
+
+
+int Frame::secondRoll()
+{
+	if (rolls.size() > 1) return rolls[1];
+}
+
+
 int Frame::parseToInt(char roll)
 {
 	if (roll == 'X') return 10;

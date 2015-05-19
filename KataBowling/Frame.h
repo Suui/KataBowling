@@ -13,6 +13,10 @@ public:
 
 	int knocks();
 
+	int firstRoll();
+
+	int secondRoll();
+
 	int parseToInt(char roll);
 	
 	bool isSpare();
