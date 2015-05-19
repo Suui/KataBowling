@@ -4,7 +4,7 @@
 Frame::Frame() {}
 
 
-Frame::Frame(const std::vector<char>& input)
+Frame::Frame(std::vector<char> input)
 {
 	for (char c : input)
 		rolls.push_back(parseToInt(c));

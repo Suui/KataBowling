@@ -3,13 +3,13 @@
 
 class Frame
 {
-	std::vector<char> rolls;
+	std::vector<int> rolls;
 
 public:
 
 	Frame();
 
-	explicit Frame(const std::vector<char>& rolls);
+	explicit Frame(std::vector<char> rolls);
 
 	int knocks();
 
