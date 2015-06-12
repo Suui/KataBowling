@@ -4,51 +4,22 @@
 Frame::Frame() {}
 
 
-Frame::Frame(std::vector<char> input)
-{
-	for (char c : input)
-		rolls.push_back(parseToInt(c));
-}
+Frame::Frame(std::vector<int> rolls, int bonus) : rolls(rolls), bonus(bonus) {}
 
 
-int Frame::knocks()
-{
-	int sum = 0;
-	for (int roll : rolls)
-		sum += roll;
-	return sum;
-}
+int Frame::Knocks() { return FirstRoll() + SecondRoll(); }
 
 
-int Frame::firstRoll()
-{
-	return rolls[0];
-}
+int Frame::Bonus() { return bonus; }
 
 
-int Frame::secondRoll()
-{
-	if (rolls.size() > 1) return rolls[1];
-	return 0;
-}
+int Frame::FirstRoll() { return rolls[0]; }
 
 
-int Frame::parseToInt(char roll)
-{
-	if (roll == 'X') return 10;
-	if (roll == '/') return 10 - rolls[0];
-	if (roll == '-') return 0;
-	return roll - '0';
-}
+int Frame::SecondRoll() { return rolls.size() > 1 ? rolls[1] : 0; }
 
 
-bool Frame::isSpare()
-{
-	return rolls[0] < 10 && knocks() == 10;
-}
+bool Frame::IsSpare() { return rolls[0] < 10 && Knocks() == 10; }
 
 
-bool Frame::isStrike()
-{
-	return rolls[0] == 10;
-}
+bool Frame::IsStrike() { return rolls[0] == 10; }

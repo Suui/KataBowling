@@ -4,22 +4,24 @@
 class Frame
 {
 	std::vector<int> rolls;
+	int bonus;
+
 
 public:
 
 	Frame();
 
-	explicit Frame(std::vector<char> rolls);
+	explicit Frame(std::vector<int> rolls, int bonus);
 
-	int knocks();
-
-	int firstRoll();
-
-	int secondRoll();
-
-	int parseToInt(char roll);
+	int FirstRoll();
 	
-	bool isSpare();
+	int SecondRoll();
+	
+	int Knocks();
+	
+	int Bonus();
 
-	bool isStrike();
+	bool IsSpare();
+
+	bool IsStrike();
 };
