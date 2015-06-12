@@ -6611,7 +6611,7 @@ namespace Catch {
     {
         bool isHidden( startsWith( _name, "./" ) ); // Legacy support
 
-        // Parse out tags
+        // FillFrames out tags
         std::set<std::string> tags;
         std::string desc, tag;
         bool inTag = false;
