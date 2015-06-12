@@ -1,40 +1,53 @@
 #include "../TestRunner/catch.hpp"
 #include "../../Source/Frame.h"
+#include "../../Source/FrameParser.h"
 
 
 TEST_CASE("Building a Frame", "[frame]")
 {
 	SECTION("Creates a Frame without knocks")
-		REQUIRE(Frame({ '-', '-' }).knocks() == 0);
+		REQUIRE(FrameParser().Parse({ '-', '-' }).Knocks() == 0);
 
 	SECTION("Creates a Frame with some knocks")
 	{
-		REQUIRE(Frame({ '-', '3' }).knocks() == 3);
-		REQUIRE(Frame({ '4', '4' }).knocks() == 8);
+		REQUIRE(FrameParser().Parse({ '-', '3' }).Knocks() == 3);
+		REQUIRE(FrameParser().Parse({ '4', '4' }).Knocks() == 8);
 	}
 
 	SECTION("Creates a Frame with a spare")
 	{
-		REQUIRE(Frame({ '-', '/' }).knocks() == 10);
-		REQUIRE(Frame({ '3', '/' }).knocks() == 10);
+		REQUIRE(FrameParser().Parse({ '-', '/' }).Knocks() == 10);
+		REQUIRE(FrameParser().Parse({ '3', '/' }).Knocks() == 10);
 	}
 
 	SECTION("Creates a Frame with a strike")
-		REQUIRE(Frame({ 'X' }).knocks() == 10);
+		REQUIRE(FrameParser().Parse({ 'X' }).Knocks() == 10);
 
 	SECTION("Calculates knocks for a last Frame with a spare")
-		REQUIRE(Frame({ '3', '/', 'X' }).knocks() == 20);
+	{
+		REQUIRE(FrameParser().Parse({ '3', '/', 'X' }).Knocks() == 10);
+		REQUIRE(FrameParser().Parse({ '3', '/', 'X' }).Bonus() == 10);
+	}
 
 	SECTION("Calculates knocks for a last Frame with a strike")
-		REQUIRE(Frame({ 'X', '3', '5' }).knocks() == 18);
+	{
+		REQUIRE(FrameParser().Parse({ 'X', '3', '5' }).Knocks() == 10);
+		REQUIRE(FrameParser().Parse({ 'X', '3', '5' }).Bonus() == 8);
+	}
+
+	SECTION("Calculates knocks for a last Frame with and a spare")
+	{
+		REQUIRE(FrameParser().Parse({ 'X', '3', '/' }).Knocks() == 10);
+		REQUIRE(FrameParser().Parse({ 'X', '3', '/' }).Bonus() == 10);
+	}
 }
 
 
 TEST_CASE("Checking what a Frame is", "[frame]")
 {
 	SECTION("Frame knows it is a Spare")
-		REQUIRE(Frame({ '-', '/' }).isSpare());
+		REQUIRE(FrameParser().Parse({ '-', '/' }).IsSpare());
 
 	SECTION("Frame knows it is a Strike")
-		REQUIRE(Frame({ 'X' }).isStrike());
+		REQUIRE(FrameParser().Parse({ 'X' }).IsStrike());
 }

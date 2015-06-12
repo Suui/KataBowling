@@ -28,4 +28,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 	SECTION("Calculates score for a line with three consecutive strikes")
 		CHECK(Line("----XXX----------").score() == 60);
 
+	SECTION("Calculates score for a line with three consecutive strikes")
+		CHECK(Line("------------------4/2").score() == 12);
+
 }
