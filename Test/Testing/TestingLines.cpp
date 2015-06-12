@@ -42,4 +42,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 
 	SECTION("Calculates score for a line with two strikes last frame")
 		CHECK(Line("------------------XX2").score() == 22);
+
+	SECTION("Calculates score for a line with three strikes last frame")
+		CHECK(Line("------------------XX2").score() == 22);
 }
