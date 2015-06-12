@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <vector>
 
+
 class Frame
 {
 	std::vector<int> rolls;
