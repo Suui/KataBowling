@@ -1,4 +1,5 @@
 /Debug/*
+Source/Debug/*
 Test/Debug/*
 *.suo
 *.opensdf
