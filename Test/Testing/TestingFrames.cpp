@@ -21,6 +21,9 @@ TEST_CASE("Building a Frame", "[frame]")
 
 	SECTION("Creates a Frame with a strike")
 		REQUIRE(Frame({ 'X' }).knocks() == 10);
+
+	SECTION("Creates a last Frame with a spare")
+		REQUIRE(Frame({ '3', '/', 'X' }).knocks() == 20);
 }
 
 
