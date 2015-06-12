@@ -1,7 +1,0 @@
-/Debug/*
-Source/Debug/*
-Test/Debug/*
-*.suo
-*.opensdf
-*.sdf
-*.user
