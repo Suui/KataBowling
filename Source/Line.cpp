@@ -1,11 +1,7 @@
 ﻿#include "Line.h"
-#include "LineBuilder.h"
 
 
-Line::Line(std::string input)
-{
-	LineBuilder::FillFrames(input, frames);
-}
+Line::Line(std::vector<Frame> frames) : frames(frames) {}
 
 
 int Line::Score()

@@ -10,7 +10,7 @@ class Line
 
 public:
 
-	Line(std::string input);
+	explicit Line(std::vector<Frame> frames);
 
 	int Score();
 };

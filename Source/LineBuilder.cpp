@@ -1,10 +1,20 @@
 ﻿#include "LineBuilder.h"
 #include "FrameParser.h"
+#include "Line.h"
 
 
-void LineBuilder::FillFrames(std::string input, std::vector<Frame>& frames)
+Line LineBuilder::Build(std::string input)
 {
-	unsigned int i = 0, j = 0;
+	std::vector<Frame> frames;
+	FillFrames(input, frames);
+
+	return Line(frames);
+}
+
+
+void LineBuilder::FillFrames(std::string& input, std::vector<Frame>& frames)
+{
+	unsigned i = 0, j = 0;
 
 	while (j < 9)
 	{
