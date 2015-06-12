@@ -1,7 +1,6 @@
-#define CATCH_CONFIG_MAIN
+#include "../TestRunner/catch.hpp"
+#include "../../Source/Frame.h"
 
-#include "catch.hpp"
-#include "Frame.h"
 
 TEST_CASE("Building a Frame", "[frame]")
 {

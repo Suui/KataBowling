@@ -78,6 +78,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Testing\TestingFrames.cpp" />
+    <ClCompile Include="Testing\TestingLines.cpp" />
+    <ClCompile Include="TestRunner\Runner.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestRunner\catch.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Source.vcxproj">
+      <Project>{527ff302-5240-41eb-8411-82c31160adcb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

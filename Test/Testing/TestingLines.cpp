@@ -1,5 +1,5 @@
-#include "catch.hpp"
-#include "Line.h"
+#include "../TestRunner/catch.hpp"
+#include "../../Source/Line.h"
 
 
 TEST_CASE("Checking Line Scores", "[line][score]")
