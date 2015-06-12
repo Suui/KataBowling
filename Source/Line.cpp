@@ -1,22 +1,10 @@
 ﻿#include "Line.h"
+#include "LineParser.h"
 
 
 Line::Line(std::string input)
 {
-	int j = 0;
-	for (unsigned int i = 0; i < input.length(); i += 2)
-	{
-		if (input.at(i) == 'X')
-		{
-			frames[j] = Frame({ 'X' });
-			j++;
-			--i;
-			continue;
-		}
-		frames[j] = Frame({ input.at(i), input.at(i+1) });
-		j++;
-	}
-
+	LineParser::FillFrames(input, frames);
 }
 
 

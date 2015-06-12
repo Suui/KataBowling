@@ -13,10 +13,12 @@
   <ItemGroup>
     <ClCompile Include="Frame.cpp" />
     <ClCompile Include="Line.cpp" />
+    <ClCompile Include="LineParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Frame.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="LineParser.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{527FF302-5240-41EB-8411-82C31160ADCB}</ProjectGuid>
