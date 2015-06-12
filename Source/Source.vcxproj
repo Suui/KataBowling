@@ -11,18 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Frame.cpp" />
-    <ClCompile Include="FrameBuilder.cpp" />
-    <ClCompile Include="FrameParser.cpp" />
-    <ClCompile Include="Line.cpp" />
-    <ClCompile Include="LineBuilder.cpp" />
+    <ClCompile Include="Frame\Frame.cpp" />
+    <ClCompile Include="Frame\FrameBuilder.cpp" />
+    <ClCompile Include="Frame\FrameParser.cpp" />
+    <ClCompile Include="Line\Line.cpp" />
+    <ClCompile Include="Line\LineBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Frame.h" />
-    <ClInclude Include="FrameBuilder.h" />
-    <ClInclude Include="FrameParser.h" />
-    <ClInclude Include="Line.h" />
-    <ClInclude Include="LineBuilder.h" />
+    <ClInclude Include="Frame\Frame.h" />
+    <ClInclude Include="Frame\FrameBuilder.h" />
+    <ClInclude Include="Frame\FrameParser.h" />
+    <ClInclude Include="Line\Line.h" />
+    <ClInclude Include="Line\LineBuilder.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{527FF302-5240-41EB-8411-82C31160ADCB}</ProjectGuid>

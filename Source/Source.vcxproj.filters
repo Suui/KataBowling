@@ -15,36 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Frame.cpp">
+    <ClCompile Include="Frame\Frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Line.cpp">
+    <ClCompile Include="Frame\FrameBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FrameParser.cpp">
+    <ClCompile Include="Frame\FrameParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FrameBuilder.cpp">
+    <ClCompile Include="Line\Line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LineBuilder.cpp">
+    <ClCompile Include="Line\LineBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Frame.h">
+    <ClInclude Include="Frame\Frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Line.h">
+    <ClInclude Include="Frame\FrameBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FrameParser.h">
+    <ClInclude Include="Frame\FrameParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FrameBuilder.h">
+    <ClInclude Include="Line\Line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LineBuilder.h">
+    <ClInclude Include="Line\LineBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

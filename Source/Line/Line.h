@@ -1,5 +1,6 @@
 ﻿#pragma once
-#include "Frame.h"
+
+#include "../Frame/Frame.h"
 
 
 class Line

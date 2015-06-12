@@ -1,6 +1,7 @@
 ﻿#include "LineBuilder.h"
-#include "FrameParser.h"
 #include "Line.h"
+#include "../Frame/FrameParser.h"
+#include "../Frame/Frame.h"
 
 
 Line LineBuilder::Build(std::string input)

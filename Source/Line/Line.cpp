@@ -1,4 +1,5 @@
 ﻿#include "Line.h"
+#include "../Frame/Frame.h"
 
 
 Line::Line(std::vector<Frame> frames) : frames(frames) {}

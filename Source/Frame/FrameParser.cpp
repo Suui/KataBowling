@@ -1,5 +1,6 @@
 ﻿#include "FrameParser.h"
 #include "FrameBuilder.h"
+#include "Frame.h"
 
 
 Frame FrameParser::Parse(std::string input)

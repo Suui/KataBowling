@@ -1,6 +1,6 @@
 #include "../TestRunner/catch.hpp"
-#include "../../Source/Frame.h"
-#include "../../Source/FrameParser.h"
+#include "../../Source/Frame/FrameParser.h"
+#include "../../Source/Frame/Frame.h"
 
 
 TEST_CASE("Building a Frame", "[frame]")

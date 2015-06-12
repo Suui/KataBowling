@@ -1,6 +1,6 @@
 #include "../TestRunner/catch.hpp"
-#include "../../Source/LineBuilder.h"
-#include "../../Source/Line.h"
+#include "../../Source/Line/LineBuilder.h"
+#include "../../Source/Line/Line.h"
 
 
 TEST_CASE("Checking Line Scores", "[line][Score]")

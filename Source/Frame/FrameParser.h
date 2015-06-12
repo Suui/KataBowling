@@ -1,5 +1,7 @@
 ﻿#pragma once
-#include "Frame.h"
+#include <vector>
+
+class Frame;
 
 
 class FrameParser
