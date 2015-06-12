@@ -12,6 +12,4 @@ class FrameParser
 public:
 
 	Frame Parse(std::string input);
-
-
 };
