@@ -1,5 +1,5 @@
-/Debug
-KataBowling/Debug
+/Debug/*
+Test/Debug/*
 *.suo
 *.opensdf
 *.sdf
