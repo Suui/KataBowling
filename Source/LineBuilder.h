@@ -2,7 +2,7 @@
 #include "Frame.h"
 
 
-class LineParser
+class LineBuilder
 {
 
 public:

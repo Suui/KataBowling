@@ -1,8 +1,8 @@
-﻿#include "LineParser.h"
+﻿#include "LineBuilder.h"
 #include "FrameParser.h"
 
 
-void LineParser::FillFrames(std::string input, Frame* frames)
+void LineBuilder::FillFrames(std::string input, Frame* frames)
 {
 	unsigned int i = 0, j = 0;
 

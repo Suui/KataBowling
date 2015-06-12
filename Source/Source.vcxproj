@@ -15,14 +15,14 @@
     <ClCompile Include="FrameBuilder.cpp" />
     <ClCompile Include="FrameParser.cpp" />
     <ClCompile Include="Line.cpp" />
-    <ClCompile Include="LineParser.cpp" />
+    <ClCompile Include="LineBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Frame.h" />
     <ClInclude Include="FrameBuilder.h" />
     <ClInclude Include="FrameParser.h" />
     <ClInclude Include="Line.h" />
-    <ClInclude Include="LineParser.h" />
+    <ClInclude Include="LineBuilder.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{527FF302-5240-41EB-8411-82C31160ADCB}</ProjectGuid>

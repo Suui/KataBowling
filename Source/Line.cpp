@@ -1,10 +1,10 @@
 ﻿#include "Line.h"
-#include "LineParser.h"
+#include "LineBuilder.h"
 
 
 Line::Line(std::string input)
 {
-	LineParser::FillFrames(input, frames);
+	LineBuilder::FillFrames(input, frames);
 }
 
 

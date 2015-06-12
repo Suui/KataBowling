@@ -21,13 +21,13 @@
     <ClCompile Include="Line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LineParser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FrameParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FrameBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,13 +38,13 @@
     <ClInclude Include="Line.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LineParser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FrameParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FrameBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
