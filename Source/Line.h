@@ -5,12 +5,12 @@
 class Line
 {
 	const int FRAMES_IN_LINE = 10;
-	Frame frames[10];
+	std::vector<Frame> frames;
 
 
 public:
 
 	Line(std::string input);
-	
-	int score();
+
+	int Score();
 };

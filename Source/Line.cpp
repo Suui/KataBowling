@@ -8,7 +8,7 @@ Line::Line(std::string input)
 }
 
 
-int Line::score()
+int Line::Score()
 {
 	int sum = 0;
 	for (int i = 0; i < FRAMES_IN_LINE; ++i)

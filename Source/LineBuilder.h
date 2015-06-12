@@ -7,5 +7,5 @@ class LineBuilder
 
 public:
 
-	static void FillFrames(std::string input, Frame* frames);
+	static void FillFrames(std::string input, std::vector<Frame>& frames);
 };
