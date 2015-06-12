@@ -1,5 +1,7 @@
 ﻿#pragma once
-#include "Frame.h"
+#include <vector>
+
+class Frame;
 
 
 class FrameParser
@@ -12,6 +14,4 @@ class FrameParser
 public:
 
 	Frame Parse(std::string input);
-
-
 };

@@ -20,13 +20,7 @@ int FrameBuilder::CalculateBonus(int bonusRolls)
 }
 
 
-bool FrameBuilder::IsStrike()
-{
-	return rolls[0] == 10;
-}
+bool FrameBuilder::IsStrike() { return rolls[0] == 10; }
 
 
-bool FrameBuilder::IsSpare()
-{
-	return rolls[0] + rolls[1] == 10;
-}
+bool FrameBuilder::IsSpare() { return rolls[0] + rolls[1] == 10; }

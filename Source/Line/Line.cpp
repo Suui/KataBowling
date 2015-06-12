@@ -1,14 +1,11 @@
 ﻿#include "Line.h"
-#include "LineParser.h"
+#include "../Frame/Frame.h"
 
 
-Line::Line(std::string input)
-{
-	LineParser::FillFrames(input, frames);
-}
+Line::Line(std::vector<Frame> frames) : frames(frames) {}
 
 
-int Line::score()
+int Line::Score()
 {
 	int sum = 0;
 	for (int i = 0; i < FRAMES_IN_LINE; ++i)
