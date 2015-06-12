@@ -48,4 +48,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 
 	SECTION("Calculates score for all strikes")
 		CHECK(Line("XXXXXXXXXXXX").score() == 300);
+
+	SECTION("Calculates score for all spares")
+		CHECK(Line("5/5/5/5/5/5/5/5/5/5/5").score() == 150);
 }
