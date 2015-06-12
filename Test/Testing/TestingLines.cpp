@@ -5,23 +5,27 @@
 TEST_CASE("Checking Line Scores", "[line][score]")
 {
 	SECTION("Creates an all zeroes Line")
-		REQUIRE(Line("--------------------").score() == 0);
+		CHECK(Line("--------------------").score() == 0);
 
 	SECTION("Creates a line with some knocks")
-		REQUIRE(Line("-3--23--------------").score() == 8);
+		CHECK(Line("-3--23--------------").score() == 8);
 
 	SECTION("Calculates score for a line with a spare")
-		REQUIRE(Line("-3--23--3/4---------").score() == 26);
+		CHECK(Line("-3--23--3/4---------").score() == 26);
 
 	SECTION("Calculates score for a line with a spare and a strike")
-		REQUIRE(Line("-3--23--3/4-X35----").score() == 52);
+		CHECK(Line("-3--23--3/4-X35----").score() == 52);
 
 	SECTION("Calculates score for a line with two consecutive strikes")
-		REQUIRE(Line("--XX--------------").score() == 30);
+		CHECK(Line("--XX--------------").score() == 30);
 
 	SECTION("Calculates score for a line with two consecutive spares")
-		REQUIRE(Line("--3/5/--------------").score() == 25);
+		CHECK(Line("--3/5/--------------").score() == 25);
 
 	SECTION("Calculates score for a line with a spare followed by a strike")
-		REQUIRE(Line("----8/X------------").score() == 30);
+		CHECK(Line("----8/X------------").score() == 30);
+
+	SECTION("Calculates score for a line with three consecutive strikes")
+		CHECK(Line("----XXX----------").score() == 60);
+
 }

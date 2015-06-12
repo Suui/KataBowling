@@ -4,7 +4,7 @@
 Line::Line(std::string input)
 {
 	int j = 0;
-	for (int i = 0; i < input.length(); i += 2)
+	for (unsigned int i = 0; i < input.length(); i += 2)
 	{
 		if (input.at(i) == 'X')
 		{
@@ -27,7 +27,13 @@ int Line::score()
 	{
 		sum += frames[i].knocks();
 		if (frames[i].isSpare()) sum += frames[i + 1].firstRoll();
-		if (frames[i].isStrike()) sum += frames[i + 1].firstRoll() + frames[i + 1].secondRoll();
+		if (frames[i].isStrike())
+		{
+			if (frames[i+1].isStrike())
+				sum += 10 + frames[i + 2].firstRoll();
+			else
+				sum += frames[i + 1].firstRoll() + frames[i + 1].secondRoll();
+		}
 	}
 
 	return sum;
