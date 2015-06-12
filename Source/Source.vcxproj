@@ -12,12 +12,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="FrameBuilder.cpp" />
     <ClCompile Include="FrameParser.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="LineParser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Frame.h" />
+    <ClInclude Include="FrameBuilder.h" />
     <ClInclude Include="FrameParser.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="LineParser.h" />
