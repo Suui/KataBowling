@@ -31,4 +31,7 @@ TEST_CASE("Checking Line Scores", "[line][score]")
 	SECTION("Calculates score for a line with a spare in the last frame")
 		CHECK(Line("------------------4/2").score() == 12);
 
+	SECTION("Calculates score for a line with a strike in the last frame")
+		CHECK(Line("------------------X22").score() == 14);
+
 }
