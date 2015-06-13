@@ -8,7 +8,7 @@ class FrameBuilder
 {
 	std::vector<int> rolls;
 
-	int CalculateBonus(int bonusRolls);
+	int CalculateBonus();
 
 	bool IsStrike();
 
