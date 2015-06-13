@@ -21,6 +21,14 @@ int FrameBuilder::CalculateBonus()
 }
 
 
+int FrameBuilder::GetBonusRolls()
+{
+	if (IsStrike()) return 2;
+	if (IsSpare()) return 1;
+	return 0;
+}
+
+
 bool FrameBuilder::IsStrike() { return rolls[0] == 10; }
 
 
