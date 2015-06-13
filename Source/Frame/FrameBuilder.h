@@ -10,6 +10,8 @@ class FrameBuilder
 
 	int CalculateBonus();
 
+	int GetBonusRolls();
+
 	bool IsStrike();
 
 	bool IsSpare();
